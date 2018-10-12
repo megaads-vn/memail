@@ -54,7 +54,7 @@ MAIL_ENCRYPTION=tls
    [
             'to' => ['first email', 'second email'],
             'view' => 'emails.hello', // or 'content' => $content
-            'data' => $data,
+            'data' => $data, // pass to $dataEmail in view
             'subject' => 'subject',
             'group' => 'developers',
             'name' => 'sender name'
