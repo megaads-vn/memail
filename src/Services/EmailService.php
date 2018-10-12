@@ -13,9 +13,9 @@ class EmailService extends BaseController
         if (isset($option['subject'])) {
             $subject = $option['subject'];
         }
-        $listTypeConfig = config('mail.config-send-email.groups', []);
-        if (isset($option['type']) && array_key_exists($option['type'], $listTypeConfig)) {
-            $listMailTo = $listTypeConfig[$option['type']];
+        $listGroupConfig = config('mail.config-send-email.groups', []);
+        if (isset($option['group']) && array_key_exists($option['group'], $listGroupConfig)) {
+            $listMailTo = $listGroupConfig[$option['group']];
         } else {
             $listMailTo = isset($option['to']) ? $option['to'] : config('mail.config-send-email.default.to', []);
         }
@@ -41,5 +41,9 @@ class EmailService extends BaseController
             }
 
         }
+        return [
+            'status' => 'successful',
+            'count' => count($listMailTo)
+        ];
     }
 }
