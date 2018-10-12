@@ -1,5 +1,5 @@
 {
-    "name": "megaads/send-email",
+    "name": "megaads/memail",
     "license": "MIT",
     "authors": [
         {
@@ -14,7 +14,7 @@
             "src"
         ],
         "psr-4": {
-            "Megaads\\Sendemail\\": "src/"
+            "Megaads\\Memail\\": "src/"
         }
     }
 }

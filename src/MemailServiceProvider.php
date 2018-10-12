@@ -1,9 +1,9 @@
 <?php
-namespace Megaads\Sendemail;
+namespace Megaads\Memail;
 
 use Illuminate\Support\ServiceProvider;
 
-class GeneratesitemapServiceProvider extends ServiceProvider
+class MemailServiceProvider extends ServiceProvider
 {
     public function boot()
     {
